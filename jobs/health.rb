@@ -30,7 +30,8 @@ ping_count = 10
 #      the check will return false
 #
 servers = [
-    {name: 'licences mock', url: 'https://licences-mock.hmpps.dsd.io/health', method: 'http'}
+    {name: 'licences mock', url: 'https://licences-mock.hmpps.dsd.io/health', method: 'http'},
+    {name: 'licences-api mock', url: 'https://licences-api-mock.hmpps.dsd.io/health', method: 'http'}
     # {name: 'licences pre-prod', url: 'http://health-kick.hmpps.dsd.io/https/licences-preprod.service.hmpps.dsd.io', method: 'http'},
     # {name: 'licences prod', url: 'http://health-kick.hmpps.dsd.io/https/licences.service.hmpps.dsd.io', method: 'http'}
 ]
