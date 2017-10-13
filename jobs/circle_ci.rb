@@ -3,8 +3,7 @@ require 'httparty'
 
 projects = [
   { user: 'noms-digital-studio', repo: 'licences', branch: 'master'},
-  { user: 'noms-digital-studio', repo: 'licences-feature-specs', branch: 'master'},
-  { user: 'noms-digital-studio', repo: 'licences-api', branch: 'master'}
+  { user: 'noms-digital-studio', repo: 'licences-feature-specs', branch: 'master'}
 ]
 
 def duration(time)
