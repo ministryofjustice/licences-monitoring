@@ -30,7 +30,8 @@ ping_count = 10
 #      the check will return false
 #
 servers = [
-    {name: 'licences mock', url: 'https://licences-mock.hmpps.dsd.io/health', method: 'http'}
+    {name: 'licences mock', url: 'https://licences-mock.hmpps.dsd.io/health', method: 'http'},
+    {name: 'licences stage', url: 'https://licences-stage.hmpps.dsd.io/health', method: 'http'}
 ]
 def gather_health_data(server)
     puts "requesting #{server[:url]}..."
