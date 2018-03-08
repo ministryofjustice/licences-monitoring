@@ -2,6 +2,7 @@
 require 'net/http'
 require 'uri'
 require 'httparty'
+require 'json'
 
 #
 ### Global Config
@@ -37,15 +38,14 @@ servers = [
 def gather_health_data(server)
     puts "requesting #{server[:url]}..."
 
-    server_response = HTTParty.get(server[:url], headers: { 'Accept' => 'application/json' })
+    server_response = HTTParty.get(server[:url], headers: { 'Accept' => 'application/json' }, format: 'json').body
 
-    puts server_response
     puts "Result from #{server[:url]} is #{server_response}"
 
-    server_response
+    JSON.parse(server_response)
 end
 
-SCHEDULER.every '60s', first_in: 0 do |_job|
+SCHEDULER.every '6s', first_in: 0 do |_job|
     servers.each do |server|
         result = gather_health_data(server)
         send_event(server[:name], result: result)
