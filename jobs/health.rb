@@ -42,7 +42,12 @@ def gather_health_data(server)
 
     puts "Result from #{server[:url]} is #{server_response}"
 
-    JSON.parse(server_response)
+    begin
+      JSON.parse(server_response)
+    rescue
+      puts "Invalid response"
+      {"healthy"=>false}
+    end
 end
 
 SCHEDULER.every '60s', first_in: 0 do |_job|
