@@ -33,8 +33,8 @@ ping_count = 10
 servers = [
     {name: 'licences mock', url: 'https://licences-mock.hmpps.dsd.io/health', method: 'http'},
     {name: 'licences stage', url: 'https://licences-stage.hmpps.dsd.io/health', method: 'http'},
-    {name: 'licences preprod', url: 'https://licences-preprod.service.hmpps.dsd.io/health', method: 'http'},
-    {name: 'licences prod', url: 'https://licences.service.hmpps.dsd.io/health', method: 'http'},
+    {name: 'licences preprod', url: 'http://health-kick.hmpps.dsd.io/https/licences-preprod.service.hmpps.dsd.io', method: 'http'},
+    {name: 'licences prod', url: 'http://health-kick.hmpps.dsd.io/https/licences.service.hmpps.dsd.io', method: 'http'},
 ]
 def gather_health_data(server)
     puts "requesting #{server[:url]}..."
