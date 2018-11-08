@@ -35,6 +35,10 @@ servers = [
     {name: 'licences stage', url: 'https://licences-stage.hmpps.dsd.io/health', method: 'http'},
     {name: 'licences preprod', url: 'http://health-kick.hmpps.dsd.io/https/licences-preprod.service.hmpps.dsd.io', method: 'http'},
     {name: 'licences prod', url: 'http://health-kick.hmpps.dsd.io/https/licences.service.hmpps.dsd.io', method: 'http'},
+
+    {name: 'batchload stage', url: 'https://nomis-batchload-stage.hmpps.dsd.io/health', method: 'http'},
+    {name: 'batchload preprod', url: 'http://health-kick.hmpps.dsd.io/https/nomis-batchload-preprod.service.hmpps.dsd.io', method: 'http'},
+    {name: 'batchload prod', url: 'http://health-kick.hmpps.dsd.io/https/nomis-batchload.service.hmpps.dsd.io', method: 'http'},
 ]
 def gather_health_data(server)
     puts "requesting #{server[:url]}..."
