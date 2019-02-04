@@ -2,9 +2,9 @@ require 'httparty'
 # require 'digest/md5'
 
 projects = [
-  { user: 'noms-digital-studio', repo: 'licences', branch: 'master'},
-  { user: 'noms-digital-studio', repo: 'licences-feature-specs', branch: 'master'},
-  { user: 'noms-digital-studio', repo: 'licences-pdf', branch: 'master'},
+  { user: 'ministryofjustice', repo: 'licences', branch: 'master'},
+  { user: 'ministryofjustice', repo: 'licences-feature-specs', branch: 'master'},
+  { user: 'ministryofjustice', repo: 'licences-pdf', branch: 'master'},
   { user: 'ministryofjustice', repo: 'nomis-batchload', branch: 'master'}
 ]
 
