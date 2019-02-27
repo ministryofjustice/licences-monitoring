@@ -3,7 +3,6 @@ require 'httparty'
 
 projects = [
   { user: 'ministryofjustice', repo: 'licences', branch: 'master'},
-  { user: 'ministryofjustice', repo: 'licences-feature-specs', branch: 'master'},
   { user: 'ministryofjustice', repo: 'licences-pdf', branch: 'master'},
   { user: 'ministryofjustice', repo: 'nomis-batchload', branch: 'master'}
 ]
